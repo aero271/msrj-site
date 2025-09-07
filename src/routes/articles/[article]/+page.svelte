@@ -36,9 +36,10 @@
     <div class="w-3/4">
         <h1 class="font-cantata text-6xl mb-3">{article?.data.title}</h1>
         <h2 class="font-roboto-serif italic ml-5">By {article?.data.author}</h2>
+        <div class="bg-black w-[100%] h-[2px] my-2"></div>
 
         <div class="flex flex-col items-center">
-            <article class="flex flex-col mt-8 w-1/2">
+            <article class="flex flex-col mt-6 min-w-1/2 max-w-[600px]">
                 {#each article?.data.content as text}
                     {#if text.type === 'paragraph'}
                         {#each text?.children as child}
