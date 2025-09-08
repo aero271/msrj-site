@@ -16,19 +16,26 @@
         const c = client.collection('articles');
 
         frontArticle = await c.findOne(home.data.front_article.documentId, { populate: 'display_image' });
-        console.log(frontArticle)
     }
     getHomePage();
 
 </script>
 
-<div>
-    <div class="w-screen flex">
-        <ArticleBig article={frontArticle}></ArticleBig>
-
-        <div class="w-[25%]">
-
+<div class="flex justify-center mt-4">
+    <div class="lg:w-2/3 flex justify-center">
+        <div class="w-[70%] ">
+            <ArticleBig article={frontArticle} ></ArticleBig>
         </div>
+
+        <div class="w-[25%] flex flex-col items-center">
+            <ArticleBig article={frontArticle}></ArticleBig>
+
+            <div class="w-[100%] ml-2">
+                <a class="font-cantata hover:text-gray-400 transition-all"
+                 href="/new-articles">More New Articles...</a>
+            </div>
+        </div>
+
     </div>
 
 </div>
