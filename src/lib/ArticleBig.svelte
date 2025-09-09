@@ -7,14 +7,19 @@
 
 </script>
 
-<div class="w-[95%] aspect-[3-2] flex flex-col items-center">
+<a href="/articles/{article?.data.documentId}"
+class="w-[95%] aspect-[3-2] flex flex-col items-center queryable">
     <img src={imgUrl} alt="article display_image" class="w-[100%] h-[100%]">
     <div class="h-[1px] bg-black w-[100%] mt-1"></div>
     <div class="font-cantata title-size">{article?.data.title}</div>
-</div>
+</a>
 
 <style>
-    .title-size {
-        font-size: clamp();
+    .queryable {
+        container-type: inline-size;
+    }
+
+    .queryable > .title-size {
+        font-size: clamp(10pt, 5cqi, 32pt);
     }
 </style>
