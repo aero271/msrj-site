@@ -59,10 +59,7 @@
                     </ol>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </div>
 <div class="h-40"></div>
