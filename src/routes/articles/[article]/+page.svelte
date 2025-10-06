@@ -1,34 +1,6 @@
 <script>
     /** @type {import('./$types').PageProps} */
     let { data } = $props();
-    
-    import { page } from '$app/state';
-    import { strapi } from '@strapi/client';
-    import { cmsApiBase, cmsAuth } from '$lib/cms-link';
-    import { get } from 'svelte/store';
-
-    let article = $state();
-
-    const getArticleData = async () => {
-
-        try {
-            const client = strapi({
-                baseURL: cmsApiBase,
-                auth: cmsAuth
-            });
-            const collection = client.collection('articles');
-            article = await collection.findOne(page.params.article);
-            for (let a of article.data.content)
-            {
-                console.log(a);
-            }
-
-        } catch(error)
-        {
-            console.log('Article Fetch error: ', error);
-        }
-    }
-    getArticleData();
 </script>
 
 <div class="flex flex-col items-center mt-12">
