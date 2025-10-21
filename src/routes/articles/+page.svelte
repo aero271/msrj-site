@@ -7,20 +7,6 @@
 
     let articles = $state();
 	
-	onMount(async () => {
-		try {
-			const client = strapi({
-				baseURL: cmsApiBase,
-				auth: cmsAuth
-			});
-			const collection = client.collection('articles');
-			articles = await collection.find({ populate: 'icon'});
-
-		} catch(error)
-		{
-			console.log('Article Fetch error: ', error);
-		}
-	});
 </script>
 
 <div class="flex justify-center flex-col items-center">

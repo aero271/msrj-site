@@ -1,11 +1,15 @@
 import { createHash } from 'crypto';
 import { cmsApiBase } from '$lib/cms-link';
 import { OJS_API, ADMIN_KEY } from '$env/static/private';
-import { fail } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit';
 import { writeFileSync } from 'fs';
 
 /** @type {import('./$types').PageServerLoad} */
-export async function load() {
+export async function load({ locals }) {
+    if (!locals.authed) {
+        throw redirect(302, '/admin-login');
+    }
+    
     
     const url = cmsApiBase + 'submissions';
     const response = await fetch(url, { 

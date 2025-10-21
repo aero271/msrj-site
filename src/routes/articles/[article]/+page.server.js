@@ -16,5 +16,6 @@ export async function load({ params }) {
 
     return {
          metadata: articleMetadata.publications[0],
+         article: pdfData
     };
 };
