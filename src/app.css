@@ -6,3 +6,6 @@
     --font-cantata: "Cantata One", serif;
     --font-roboto-serif: "Roboto Serif", serif;
 }
+main {
+    min-height: 100vh;
+}

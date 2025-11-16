@@ -1,57 +1,37 @@
-
 <script>
-    import { cmsApiBase, cmsAuth } from "$lib/cms-link";
-    import { strapi } from "@strapi/client";
     import ArticleBig from "$lib/ArticleBig.svelte";
-    
-    let frontArticle = $state();
-    let newArticles = $state(new Array());
-
-    async function getHomePage() {
-        try {
-            const client = strapi({
-                baseURL: cmsApiBase,
-                auth: cmsAuth
-            });
-            const s = client.single('home-page');
-            const home = await s.find({ populate: ['front_article', 'featured_articles', 'new_articles']});
-            const c = client.collection('articles');
-
-            frontArticle = await c.findOne(home.data.front_article.documentId, { populate: 'display_image' });
-            for (let newArt of home.data.new_articles) {
-                const n = await c.findOne(newArt.documentId, { populate: 'display_image' });
-                newArticles.push(n);
-            }
-        } catch (error) {
-            console.error("Home Page Fetching Error: \n", error);
-        }
-    }
-    getHomePage();
-
+    import SectionRow from "$lib/SectionRow.svelte";
+    let { data } = $props();
+    console.log(data.sciences)
 </script>
 
-<div class="flex items-center flex-col mt-4">
-    <div class="w-2/3 flex justify-center max-h-[90vh]">
-        <div class="w-[70%] ">
-            <ArticleBig article={frontArticle} ></ArticleBig>
+<main class="flex items-center flex-col mt-4">
+    <h class="text-6xl font-cantata font-bold mt-4">Mastery: The Student Research Journal</h>
+    <h class="font-roboto-serif italic my-2">A research journal for students, by students. Created at the Mastery School of Hawken in Cleveland, Ohio</h>
+    <div class="w-2/3 h-[1px] bg-black"></div>
+    <div class="w-2/3 flex justify-center max-h-[90vh] mt-7">
+        <div class="w-[72%]">
+            <ArticleBig article={data.frontArticle}></ArticleBig>
         </div>
 
         <div class="w-[25%] flex flex-col items-center ml-6">
             <div class="max-h-1/2 w-[100%] mb-1">
-                <ArticleBig article={newArticles[0]}></ArticleBig>
+                <ArticleBig article={data.new1}></ArticleBig>
             </div>
-            <div class="max-h-1/2 w-[100%]">
-                <ArticleBig article={newArticles[1]}></ArticleBig>
+            <div class="max-h-1/2 w-[100%] mt-4">
+                <ArticleBig article={data.new2}></ArticleBig>
             </div>
 
             <div class="w-[100%] ml-2">
-                <a class="font-cantata hover:text-gray-400 transition-all"
-                 href="/new-articles">More New Articles...</a>
+                <a class="font-cantata hover:text-gray-400 transition-all" href="/new-articles">More New Articles...</a>
             </div>
         </div>
     </div>
-    <div>
-
+    <div class="w-2/3 mt-12 font-roboto-serif">
+        <SectionRow articles={data.sciences} name={'Natural and Physical Sciences'} />
     </div>
 
-</div>
+    <div class="w-2/3 mt-12 font-roboto-serif">
+        <SectionRow articles={data.hum} name={'Humanities'} />
+    </div>
+</main>

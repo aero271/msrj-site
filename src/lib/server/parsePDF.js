@@ -1,3 +1,6 @@
+// !! DEPRICATED !! 
+// May have future use with heavy adjustment
+
 import { PDFExtract } from "pdf.js-extract";
 import { cmsApiBase, cmsBase } from "$lib/cms-link";
 import { OJS_API, FILE_API_KEY } from "$env/static/private";

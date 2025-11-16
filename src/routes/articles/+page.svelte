@@ -1,18 +1,17 @@
 <script>
-	import { onMount } from 'svelte';
-	import { strapi } from '@strapi/client';
-	import qs from 'qs';
-    import ArticleRow from '$lib/ArticleRow.svelte';
-	import { cmsApiBase, cmsAuth } from '$lib/cms-link';
-
+    import ArticleRow from "$lib/ArticleRow.svelte";
+    let { data } = $props();
     let articles = $state();
-	
 </script>
 
-<div class="flex justify-center flex-col items-center">
-    <h1 class="text-6xl font-bold font-serif my-8">Articles</h1>
-    {#each articles?.data as article}
-         <ArticleRow article={article}></ArticleRow>
-    {/each}
+<main class="flex flex-col items-center">
+    <h1 class="text-7xl font-serif my-8">Articles</h1>
+    <div class="min-w-1/2 max-w-[1000px]">
+        <div class="bg-gray-600 h-[1px] w-full mb-3"></div>
+        {#each data.articles as article}
+            <ArticleRow article={article}></ArticleRow>
+        {/each}
 
-</div>
+    </div>
+
+</main>

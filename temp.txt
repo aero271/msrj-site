@@ -1,0 +1,8 @@
+                {#if article.length === -1}
+                    <div>This article currently has no elements</div>
+                {/if}
+                {#key article.length}
+                    {#each article as element, i (i)}
+                        <ArticleElement initialValues={element} typeChangeHandler={setType} contentChangeHandler={setContent} deleteHandler={deleteElement} index={i} />
+                    {/each}
+                {/key}
