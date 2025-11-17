@@ -19,6 +19,7 @@
 			<img src={logo} alt="MSRJ Logo" class="h-full  block">
 		</a>
 		<a href="/articles" class="h-[95%] flex justify-center items-center  ml-auto px-3 text-xl hover:bg-gray-200"><div>Articles</div></a>
+		<a href="/issues" class="h-[95%] flex justify-center items-center px-3 text-xl hover:bg-gray-200"><div>Issues</div></a>
 		<a href="/about" class="h-[95%] flex justify-center items-center px-3 text-xl hover:bg-gray-200"><div>About</div></a>
 		<a href="/editorial" class="h-[95%] flex justify-center items-center px-3 text-xl hover:bg-gray-200"><div>Editorial Board</div></a>
 

@@ -2,7 +2,6 @@
     import ArticleBig from "$lib/ArticleBig.svelte";
     import SectionRow from "$lib/SectionRow.svelte";
     let { data } = $props();
-    console.log(data.sciences)
 </script>
 
 <main class="flex items-center flex-col mt-4">

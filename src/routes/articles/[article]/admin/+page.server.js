@@ -14,14 +14,28 @@ export async function load({ locals, params }) {
         throw redirect(302, '/admin-login');
     }
 
-    const url = cmsApiBase + 'submissions/' + params.article;
-    const response = await fetch(url, { 
+    let url = cmsApiBase + 'submissions/' + params.article;
+    let response = await fetch(url, { 
         headers: { 'Authorization': `Bearer ${OJS_API}` }
     });
     const articleMetadata = await response.json();
 
     const [rows] = await pool.query("SELECT * FROM articles WHERE id = ?;", [params.article]);
     const article = rows[0].content;
+
+    let possibleIssues = [];
+    url = cmsApiBase + 'issues';
+    response = await fetch(url, { 
+        headers: { 'Authorization': `Bearer ${OJS_API}` }
+    });
+    const issues = await response.json();
+    for (let i = 0; i < issues.items.length; i++) {
+        possibleIssues.push({
+            id: issues.items[i].id,
+            title: issues.items[i].title.en,
+        });
+    }
+    
 
     return { 
         article: article,
@@ -30,8 +44,11 @@ export async function load({ locals, params }) {
             authors: rows[0].authors,
             coverImg: rows[0].cover_img,
             iconImg: rows[0].icon_img,
-            section: rows[0].section
-        }
+            section: rows[0].section,
+            issueId: rows[0].issue_id,
+            issueName: rows[0].issue_name,
+        },
+        issues: possibleIssues,
      };
 };
 
@@ -130,11 +147,21 @@ export const actions = {
         const title = data.get('title');
         const authors = data.get('authors');
         const section = data.get('section');
+        const issue = data.get('issue');
+        let issueName = ''; 
+        if (issue) {
+            const url = cmsApiBase + 'issues/' + issue;
+            const response = await fetch(url, { 
+                headers: { 'Authorization': `Bearer ${OJS_API}` }
+            });
+            issueName = (await response.json()).title.en;
+        }
 
-        const updateSql = `UPDATE articles
-        SET title = ?, authors = ?, section = ? WHERE id = ?;`
+        let updateSql = `UPDATE articles
+        SET title = ?, authors = ?, section = ?, issue_id = ?, issue_name = ? WHERE id = ?;`
+    
         try {
-            await pool.execute(updateSql, [title, authors, section, params.article]);
+            await pool.execute(updateSql, [title, authors, section, issue, issueName, params.article]);
         } catch (error) {
             fail(401, `Article metadata update error: ${error}`);
         }

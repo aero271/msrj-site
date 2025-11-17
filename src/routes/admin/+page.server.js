@@ -62,7 +62,7 @@ export const actions = {
         
         const insertSql =  `INSERT INTO articles (id, content, title, authors, issue_id, issue_name)
                             VALUES (?, ?, ?, ?, ?, ?);`
-        await pool.execute(insertSql, [articleId, '[]', title, authors, issueId, issueName]);
+        await pool.execute(insertSql, [articleId, '<p></p>', title, authors, issueId, issueName]);
     },
     saveSettings: async ({ request }) => {
         const data = await request.formData();

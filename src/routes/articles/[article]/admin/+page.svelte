@@ -63,6 +63,12 @@
                     <option>Social Sciences</option>
                     <option>Humanities</option>
                 </select>
+                <label for="issue" class="ml-2">Issue: </label>
+                <select name="issue" id="issue" class="ml-2" bind:value={data.metadata.issueId}>
+                    {#each data.issues as issue}
+                        <option value={issue.id}>{issue.title}</option>
+                    {/each}
+                </select>
                 <button type="submit" class="ml-2 border-1 p-2 px-3 hover:bg-gray-200">Save Metadata</button>
             </div>
         </form>

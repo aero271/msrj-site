@@ -1,6 +1,7 @@
 <script>
     import { enhance } from "$app/forms";
     import xIcon from '$lib/assets/x-icon-png-25-1047506122.png'
+    import gotoArrow from '$lib/assets/arrow-up-right-from-square-svgrepo-com.svg'
 
     /** @type {import('./$types').PageProps} */
     let { data } = $props();
@@ -74,6 +75,8 @@
                 {/each}
             </ul>
         </div>
+
+        <a class="text-xl mt-5 flex items-center hover:text-blue-400" href="/issues/admin">Issue Editor  <img src={gotoArrow} alt="Goto" class="h-5 ml-2"></a>
 
     </div>
 
