@@ -20,7 +20,6 @@ export async function load() {
             }
         }
     }
-    console.log(issues.items);
 
     return { 
         issues: issues.items

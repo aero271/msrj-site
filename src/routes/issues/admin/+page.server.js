@@ -23,7 +23,6 @@ export async function load({ locals }) {
             }
         }
     }
-    console.log(issues.items);
     return { 
         issues: issues.items
     };

@@ -27,10 +27,18 @@
         </div>
     </div>
     <div class="w-2/3 mt-12 font-roboto-serif">
-        <SectionRow articles={data.sciences} name={'Natural and Physical Sciences'} />
+        {#if data.sciences?.length > 0}
+            <SectionRow articles={data.sciences} name={'Natural and Physical Sciences'} />
+        {/if}
     </div>
-
     <div class="w-2/3 mt-12 font-roboto-serif">
-        <SectionRow articles={data.hum} name={'Humanities'} />
+        {#if data.social?.length > 0}
+            <SectionRow articles={data.social} name={'Social Sciences, Policy, and Law'} />
+        {/if}
+    </div>
+    <div class="w-2/3 mt-12 font-roboto-serif">
+        {#if data.hum?.length > 0}
+            <SectionRow articles={data.hum} name={'Humanities and Culture'} />
+        {/if}
     </div>
 </main>
