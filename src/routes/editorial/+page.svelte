@@ -1,8 +1,8 @@
 <script>
     import imrePhoto from "$lib/assets/IMG_0587-EDIT (1) - Imre Huss.jpg";
-    import picassoPhoto from "$lib/assets/ailey_picasso-2958741812.jpg";
+    import picassoPhoto from "$lib/assets/picasso.png";
     import zevPhoto from "$lib/assets/large_user_7449751_296.jpg";
-    import amoghPhoto from "$lib/assets/amogh.jpg";
+    import amoghPhoto from "$lib/assets/amogh.jpeg";
     import robertPhoto from "$lib/assets/robert.jpg";
     import tatianaPhoto from "$lib/assets/tatiana.jpg";
     import irisPhoto from "$lib/assets/iris.jpg";
@@ -17,7 +17,7 @@
         <div class="flex min-h-[350px]">
             <div class="min-w-2/3">
                 <h2 class="text-4xl font-cantata">
-                    Imre Huss '26 - Editor In Chief - Founder
+                    Imre Huss '26 - Editor-in-Chief - Founder
                 </h2>
                 <p class="text-lg italic mt-2">Why did you join MSRJ?</p>
                 <p class="indent-8">
@@ -54,8 +54,8 @@
                 </h2>
                 <p class="text-lg italic mt-2">Why did you join MSRJ?</p>
                 <p class="indent-8">
-                    "I joined MSRJ since to help create an environment at The
-                    Mastery School of Hawken where students could have their
+                    "I joined MSRJ to help create an environment at The
+                    Mastery School of Hawken where students can have their
                     high-quality work viewed by a wider audience and to
                     encourage the creation of said high quality work."
                 </p>
@@ -63,7 +63,7 @@
                     What value do you believe MSRJ provides?
                 </p>
                 <p class="indent-8">
-                    "It encourages students of MSH with the opportunity for
+                    "It it gives students at MSH the opportunity for
                     their work to be displayed to a wider audience while
                     receiving support to increase their standards for work
                     quality."
@@ -166,7 +166,7 @@
         <div class="w-full h-[1px] bg-black mb-4 mt-3"></div>
         <h1 class="text-2xl font-cantata">Dr. Claudia Tausz</h1>
         <div class="w-full h-[1px] bg-black my-4"></div>
-        <h1 class="text-2xl font-cantata">Derrick Deloro</h1>
+        <h1 class="text-2xl font-cantata">Derick Delloro</h1>
         <div class="w-full h-[1px] bg-black my-4"></div>
     </div>
 </main>
