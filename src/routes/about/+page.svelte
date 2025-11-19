@@ -1,6 +1,6 @@
 
 <main class="flex flex-col items-center font-roboto-serif">
-    <div class="w-2/3 mt-4">
+    <div class="w-full max-w-[1200px] mt-4">
         <h1 class="text-6xl font-cantata mt-4">About Us</h1>
         <div class="w-full h-[1px] bg-black mb-1 mt-3"></div>
         <div class="flex h-[500px] mt-4 w-full">

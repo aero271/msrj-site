@@ -10,16 +10,16 @@
 
         let params = new URLSearchParams({ id: data.metadata.id }).toString();
         const a = document.createElement('a');
-        a.href = 'http://localhost:5173/api/getPDF?' + params;
+        a.href = '/api/getPDF?' + params;
         a.download = 'article'; 
         a.click();
     }
 
 </script>
 
-<main class="flex flex-col items-center mt-12 font-roboto-serif">
+<main class="flex flex-col items-center mt-12 font-roboto-serif mx-2">
 
-    <div class="w-3/4">
+    <div class="w-full max-w-[1600px]">
         <h1 class="font-cantata text-6xl mb-3">{data.metadata.title}</h1>
         <div class="flex h-8 items-center">
             <h2 class="font-roboto-serif italic ml-5">By {data.metadata.authors}</h2>
@@ -33,19 +33,11 @@
         <div class="bg-black w-[100%] h-[2px] my-2"></div>
 
         <div class="flex flex-col items-center">
-            <article class="flex flex-col mt-6 min-w-1/2 max-w-[600px]">
+            <article class="flex flex-col mt-6 w-full max-w-[800px]">
                 {@html data.article}
             </article>
             <div class="w-[100%] flex flex-col items-center mt-12">
                 <div class="bg-black w-[100%] h-[2px] mb-2"></div>
-                <div class="flex flex-col w-3/4 font-roboto-serif">
-                    <div class="text-lg mb-1">References</div>
-                    <ol>
-                        <li class="ml-4 text-sm">TODO</li>
-                        <li class="ml-4 text-sm">Add</li>
-                        <li class="ml-4 text-sm">this</li>
-                    </ol>
-                </div>
             </div>
         </div>
     </div>

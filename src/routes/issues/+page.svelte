@@ -7,8 +7,8 @@
     let mostRecentIssue = $state(data.issues[0]);
 </script>
 
-<main class="flex items-center flex-col mt-4 font-roboto-serif">
-    <div class="w-2/3 flex flex-col mt-7 ">
+<main class="flex items-center flex-col mt-4 font-roboto-serif mx-2">
+    <div class="w-full max-w-[1300px] flex flex-col mt-7 ">
         <h class="font-cantata text-5xl">Issues</h>
         <div class="w-full h-[1px] bg-black mt-2"></div>
         {#each data.issues as issue}

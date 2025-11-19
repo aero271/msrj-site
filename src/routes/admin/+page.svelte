@@ -37,7 +37,7 @@
             <div class="ml-2">
                 <div>Front Article</div>
                 <select name="frontArticle" class="w-64">
-                    {#each data.titles as title}
+                    {#each data.articles as title}
                         <option value={title.id}>{title.title}</option>
                     {/each}
                 </select>
@@ -45,7 +45,7 @@
             <div class="ml-2">
                 <div>New Article 1</div>
                 <select name="newArticle1" class="w-64">
-                    {#each data.titles as title}
+                    {#each data.articles as title}
                         <option value={title.id}>{title.title}</option>
                     {/each}
                 </select>
@@ -53,7 +53,7 @@
             <div class="ml-2">
                 <div>New Article 2</div>
                 <select name="newArticle2" class="w-64">
-                    {#each data.titles as title}
+                    {#each data.articles as title}
                         <option value={title.id}>{title.title}</option>
                     {/each}
                 </select>

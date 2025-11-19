@@ -48,9 +48,9 @@
 
 </script>
 
-<main class="flex flex-col items-center mt-12 font-roboto-serif">
+<main class="flex flex-col items-center mt-12 font-roboto-serif mx-2">
 
-    <div class="w-3/4">
+    <div class="max-w-[1400px] w-full">
         <form method="POST" action="?/saveMetadata">
             <input type="text" name="title" class="font-cantata text-6xl mb-3 w-full" bind:value={data.metadata.title}>
             <div class="flex h-8 items-center">
