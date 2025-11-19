@@ -12,7 +12,7 @@ class="w-[100%] min-h-[100%] flex flex-col items-center queryable">
     <div class="h-[1px] bg-black w-[100%] mt-2"></div>
     <h class="font-cantata title-size w-[100%]">{article.title}</h>
 
-    <div class="w-[100%] mt-auto">
+    <div class="w-[100%] mt-1">
         <div class="font-roboto-serif italic">{article.authors}</div>
     </div>
 
