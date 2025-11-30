@@ -102,3 +102,7 @@
         </form>
     </div>
 </main>
+
+<svelte:head>
+    <title>Admin Panel</title>
+</svelte:head>

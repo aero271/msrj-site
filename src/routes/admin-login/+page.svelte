@@ -13,3 +13,7 @@
     </div>
 
 </main>
+
+<svelte:head>
+    <title>Admin Login</title>
+</svelte:head>

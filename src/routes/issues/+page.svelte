@@ -16,3 +16,7 @@
         {/each}
     </div>  
 </main>
+
+<svelte:head>
+    <title>Issues - Mastery: The Student Research Journal</title>
+</svelte:head>

@@ -40,6 +40,5 @@
                 <SectionRow articles={data.hum} name={'Humanities and Culture'} />
             {/if}
         </div>
-
     </div>
 </main>

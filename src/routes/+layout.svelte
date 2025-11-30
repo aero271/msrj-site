@@ -39,11 +39,9 @@
 			class="h-[95%] flex justify-center items-center px-3 text-xl hover:bg-gray-200"
 			><div>About</div></a
 		>
-		<a
-			href="/editorial"
-			class="h-[95%] flex justify-center items-center px-3 text-xl hover:bg-gray-200"
-			><div>Editorial Board</div></a
-		>
+		<a href="/editorial" class="h-[95%] flex justify-center items-center px-3 text-xl hover:bg-gray-200">
+			<div>Editorial Board</div>
+		</a>
 	</div>
 	<div class="w-screen h-[4px] bg-black"></div>
 </header>
@@ -52,9 +50,7 @@
 	<div class="bg-black w-full h-[1px]"></div>
 	<div class="w-2/3 h-full mt-2 flex justify-center">
 		<div class="w-2/5">
-			<h class="font-cantata w-full text-lg"
-				>Mastery: The Student Research Journal</h
-			>
+			<h class="font-cantata w-full text-lg">Mastery: The Student Research Journal</h>
 			<p class="italic text-sm my-2">
 				A research journal for the rest of us.
 			</p>
@@ -65,13 +61,8 @@
 			<a href="/" class="hover:text-gray-400 my-1">Home</a>
 			<a href="/articles" class="hover:text-gray-400 my-1">Articles</a>
 			<a href="/about" class="hover:text-gray-400 my-1">About</a>
-			<a href="/admin" class="hover:text-gray-400 my-1"
-				>For Administrators</a
-			>
-			<a
-				href="https://masteryjournel.freedynamicdns.org"
-				class="hover:text-gray-400 my-1">For Authors</a
-			>
+			<a href="/admin" class="hover:text-gray-400 my-1">For Administrators</a>
+			<a href="https://masteryjournel.freedynamicdns.org" class="hover:text-gray-400 my-1">For Authors</a>
 		</div>
 	</div>
 </footer>

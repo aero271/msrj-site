@@ -31,3 +31,7 @@
         </div> 
     </div>
 </main>
+
+<svelte:head>
+    <title>About - Mastery: The Student Research Journal</title>
+</svelte:head>

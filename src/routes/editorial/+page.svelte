@@ -170,3 +170,7 @@
         <div class="w-full h-[1px] bg-black my-4"></div>
     </div>
 </main>
+
+<svelte:head>
+    <title>Editorial Board - Mastery: The Student Research Journal</title>
+</svelte:head>

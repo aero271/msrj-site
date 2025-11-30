@@ -43,3 +43,7 @@
     </div>
     <div class="h-40"></div>
 </main>
+
+<svelte:head>
+    <title>{data.metadata.title}</title>
+</svelte:head>
