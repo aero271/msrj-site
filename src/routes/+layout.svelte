@@ -1,13 +1,12 @@
 <script>
 	import "../app.css";
-	import favicon from "$lib/assets/favicon.svg";
 	import logo from "$lib/assets/msrj-logo.png";
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={logo} />
+	<link rel="icon" href="/favicon.png" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
