@@ -1,3 +1,6 @@
+<script>
+    import groupPhoto from '$lib/assets/group-photo.jpg'
+</script>
 
 <main class="flex flex-col items-center font-roboto-serif">
     <div class="w-full max-w-[1200px] mt-4">
@@ -27,7 +30,9 @@
                     such as ResearchGate and Google Scholar.
                 </p>
             </div>
-            <img class="w-[45%] max-h-full ml-auto" alt="MSRJ group meeting"> 
+            <div class="ml-auto max-w-[45%] h-[500px] flex items-center">
+                <img class="  ml-auto" src={groupPhoto} alt="MSRJ group meeting"> 
+            </div>
         </div> 
     </div>
 </main>

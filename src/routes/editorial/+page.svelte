@@ -1,11 +1,12 @@
 <script>
+    // The formatting got screwed up on this page, not really sure how
     import imrePhoto from "$lib/assets/IMG_0587-EDIT (1) - Imre Huss.jpg";
     import picassoPhoto from "$lib/assets/picasso.png";
     import zevPhoto from "$lib/assets/large_user_7449751_296.jpg";
     import amoghPhoto from "$lib/assets/amogh.jpeg";
     import robertPhoto from "$lib/assets/robert.jpg";
     import tatianaPhoto from "$lib/assets/tatiana.jpg";
-    import irisPhoto from "$lib/assets/iris.jpg";
+    import irisPhoto from "$lib/assets/iris-photo.png";
 </script>
 
 <main class="flex flex-col items-center font-roboto-serif mx-2">
@@ -115,50 +116,41 @@
         <div class="w-full h-[1px] bg-black my-4"></div>
         <div class="flex items-center">
             <h2 class="text-4xl font-cantata flex items-center">
-                Tatiana Gillespie
-                <span class="text-2xl ml-10 max-w-[65%] mr-2 font-roboto-serif"
-                    >Head Editor, Humanities and Culture Section + Print Issue
-                    Designer</span
-                >
-            </h2>
-            <img alt="Tatiana Gillespie" src={tatianaPhoto} class="ml-auto" />
-        </div>
-        <div class="w-full h-[1px] bg-black my-4"></div>
-        <div class="flex items-center">
-            <h2 class="text-4xl font-cantata flex items-center">
                 Iris von der Heydt <span
                     class="text-2xl ml-10 mr-2 font-roboto-serif"
                     >Head Editor, Natural Science Section</span
                 >
             </h2>
-            <img alt="Iris von der Heydt" src={irisPhoto} class="ml-auto" />
+            <div class="max-w-[15.5%] ml-auto">
+                <img alt="Iris von der Heydt" src={irisPhoto} class=" " />
+            </div>
         </div>
         <div class="w-full h-[1px] bg-black my-4 mb-8"></div>
 
         <h1 class="mt-4 text-2xl">Additional Staff</h1>
         <div class="w-full h-[1px] bg-black mb-6 mt-3"></div>
         <h1 class="text-3xl font-cantata">
-            Jamie Lintgen - <span class="font-roboto-serif"
+            Jamie Lintgen - <span class="font-roboto-serif text-2xl"
                 >Chief Technology Officer</span
             >
         </h1>
         <div class="w-full h-[1px] bg-black my-6"></div>
         <h1 class="text-3xl font-cantata">
-            Giles Killpack - <span class="font-roboto-serif"
+            Giles Killpack - <span class="font-roboto-serif text-2xl"
                 >Chief Operations Officer</span
             >
         </h1>
         <div class="w-full h-[1px] bg-black my-6"></div>
         <h1 class="text-3xl font-cantata">
-            Sophia Carter - <span class="font-roboto-serif"
-                >Assistant Editor, All Sections + Outreach Coordinator</span
-            >
+            Sophia Carter - <span class="font-roboto-serif text-2xl">Assistant Editor, All Sections + Outreach Coordinator</span>
         </h1>
         <div class="w-full h-[1px] bg-black my-6"></div>
         <h1 class="text-3xl font-cantata">
-            Alena Glenn - <span class="font-roboto-serif"
-                >Assistant Editor, All Sections + Workshop Coordinator</span
-            >
+           Riva Kogan - <span class="font-roboto-serif text-2xl">Assistant Editor, Social Sciences and Humanities Sections + Print Issue Designer</span>
+        </h1>
+        <div class="w-full h-[1px] bg-black my-6"></div>
+        <h1 class="text-3xl font-cantata">
+           Katherine Bohlen - <span class="font-roboto-serif text-2xl">Assistant Editor, Natural Sciences Section</span>
         </h1>
         <div class="w-full h-[1px] bg-black my-6"></div>
 
